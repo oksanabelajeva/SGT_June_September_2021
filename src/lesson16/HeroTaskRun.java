@@ -56,6 +56,20 @@ public class HeroTaskRun {
             System.out.println("There is some hero with the name “John”.");
         }
 
+        // Another way to check if there is any John.
+//        boolean isJohn = false;
+//        for (HeroTask hero : metropoleHeroes) {
+//            if (hero.getName().matches("John")) {
+//                isJohn = true;
+//                break;
+//            }
+//        }
+//        if (isJohn) {
+//            System.out.println("There is some hero with the name “John”.");
+//        } else {
+//            System.out.println("There is no hero with the name “John”.");
+//        }
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input new hero's name:");
         String newHeroName = scanner.nextLine();
