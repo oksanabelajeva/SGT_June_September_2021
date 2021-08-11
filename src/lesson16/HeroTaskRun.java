@@ -7,11 +7,11 @@ public class HeroTaskRun {
 
     public static void main(String[] args) {
         HeroTask heroBatman = new HeroTask("Nicolas", "Pitt",
-                "Batman", 324, HeroType.Hero, 67);
+                "Batman", 324, 67);
         HeroTask heroWonderWoman = new HeroTask("Margo", "Cage",
-                "Wonder Woman", 768, HeroType.Hero, 897);
+                "Wonder Woman", 768, 897);
         HeroTask heroUltron = new HeroTask("Grim", "Reaper",
-                "Ultron", 10, HeroType.Villain, 19);
+                "Ultron", 10, 19);
 
         System.out.println("Information about heroes: \nBatman " + heroBatman + "\nWonder Woman " + heroWonderWoman +
                 "\nUltron " + heroUltron);
@@ -85,7 +85,7 @@ public class HeroTaskRun {
         int newHeroDeedTime = scanner.nextInt();
 
         HeroTask newHero = new HeroTask(newHeroName, newHeroSurname, newHeroNickname,
-                newHeroID, newHeroType, newHeroDeedTime);
+                newHeroID, newHeroDeedTime);
 
         HeroTask[] newMetropoleHeroes = {metropoleHeroes[0], metropoleHeroes[1], metropoleHeroes[2], newHero};
         System.out.println(Arrays.toString(newMetropoleHeroes));

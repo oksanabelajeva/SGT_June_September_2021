@@ -6,27 +6,25 @@ public class HeroTask {
     String surname;
     String nickname;
     int heroID;
-    private HeroType heroType;
-    int deedTime;
+    int crimeTime;
 
     public HeroTask() {
     }
 
-    public HeroTask(String name, String surname, String nickname, int heroID, HeroType heroType, int deedTime) {
+    public HeroTask(String name, String surname, String nickname, int heroID, int crimeTime) {
         this.name = name;
         this.surname = surname;
         this.nickname = nickname;
         this.heroID = heroID;
-        this.heroType = heroType;
-        this.deedTime = deedTime;
+        this.crimeTime = crimeTime;
     }
 
     public int calculatedLevel() {
-        if (deedTime < 20) {
+        if (crimeTime < 20) {
             return 1;
-        } else if (deedTime >= 20 && deedTime <= 40) {
+        } else if (crimeTime >= 20 && crimeTime <= 40) {
             return 2;
-        } else if (deedTime > 40) {
+        } else if (crimeTime > 40) {
             return 3;
         }
         return 0;
@@ -64,20 +62,12 @@ public class HeroTask {
         this.heroID = heroID;
     }
 
-    public HeroType getHeroType() {
-        return heroType;
+    public int getCrimeTime() {
+        return crimeTime;
     }
 
-    public void setHeroType(HeroType heroType) {
-        this.heroType = heroType;
-    }
-
-    public int getDeedTime() {
-        return deedTime;
-    }
-
-    public void setDeedTime(int deedTime) {
-        this.deedTime = deedTime;
+    public void setCrimeTime(int crimeTime) {
+        this.crimeTime = crimeTime;
     }
 
     @Override
@@ -87,8 +77,7 @@ public class HeroTask {
                 ", surname='" + surname + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", heroID=" + heroID +
-                ", heroType=" + heroType +
-                ", deedTime=" + deedTime +
+                ", deedTime=" + crimeTime +
                 '}';
     }
 }

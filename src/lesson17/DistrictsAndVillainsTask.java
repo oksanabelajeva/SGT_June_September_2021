@@ -1,20 +1,19 @@
 package lesson17;
 
 import lesson16.HeroTask;
-import lesson16.HeroType;
 
 import java.util.ArrayList;
 
 public class DistrictsAndVillainsTask {
     public static void main(String[] args) {
 
-        HeroTask hero1 = new HeroTask("Janis", "Liepins", "Ninja", 45, HeroType.Hero, 45);
-        HeroTask hero2 = new HeroTask("Julia", "Skaista", "Go-girl", 56, HeroType.Villain, 1);
-        HeroTask hero3 = new HeroTask("John", "Markovich", "Marko", 657, HeroType.Hero, 46);
-        HeroTask hero4 = new HeroTask("Nicolas", "Great", "Great man", 234, HeroType.Hero, 21);
-        HeroTask hero5 = new HeroTask("Grim", "Belyaev", "BeGrim", 789, HeroType.Hero, 34);
-        HeroTask hero6 = new HeroTask("Maris", "Zalitis", "Grass man", 12, HeroType.Hero, 50);
-        HeroTask hero7 = new HeroTask("Margarita", "Beautiful", "Beauty-girl", 5, HeroType.Villain, 19);
+        HeroTask hero1 = new HeroTask("Janis", "Liepins", "Ninja", 45, 45);
+        HeroTask hero2 = new HeroTask("Julia", "Skaista", "Go-girl", 56,  1);
+        HeroTask hero3 = new HeroTask("John", "Markovich", "Marko", 657, 46);
+        HeroTask hero4 = new HeroTask("Nicolas", "Great", "Great man", 234, 21);
+        HeroTask hero5 = new HeroTask("Grim", "Belyaev", "BeGrim", 789, 34);
+        HeroTask hero6 = new HeroTask("Maris", "Zalitis", "Grass man", 12, 50);
+        HeroTask hero7 = new HeroTask("Margarita", "Beautiful", "Beauty-girl", 5, 19);
 
         ArrayList<HeroTask> districtSmallList = new ArrayList<>();
         districtSmallList.add(hero1);
@@ -50,5 +49,11 @@ public class DistrictsAndVillainsTask {
         }
 
         System.out.println(allDistricts.remove(districtSmall)); // ir printed out true
+
+        // TASK 2
+        HeroTask heroWithCrimeTimeFirst = new HeroTask("Oxana", "Belyaeva", "Cool Star", 45, 78);
+        HeroTask heroWithCrimeTimeSecond = new HeroTask("Lidija", "Belyaeva", "Saver", 54, 87);
+        System.out.println(heroWithCrimeTimeFirst);
+        System.out.println(heroWithCrimeTimeSecond);
     }
 }
