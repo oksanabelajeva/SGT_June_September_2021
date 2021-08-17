@@ -1,27 +1,27 @@
-package lesson16;
+package heroAppLesson16Lesson19;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class HeroTaskRun {
+public class HeroTaskRunLesson16 {
 
     public static void main(String[] args) {
-        HeroTask heroBatman = new HeroTask("Nicolas", "Pitt",
+        Hero heroBatman = new Hero("Nicolas", "Pitt",
                 "Batman", 324, 67);
-        HeroTask heroWonderWoman = new HeroTask("Margo", "Cage",
+        Hero heroWonderWoman = new Hero("Margo", "Cage",
                 "Wonder Woman", 768, 897);
-        HeroTask heroUltron = new HeroTask("Grim", "Reaper",
+        Hero heroUltron = new Hero("Grim", "Reaper",
                 "Ultron", 10, 19);
 
         System.out.println("Information about heroes: \nBatman " + heroBatman + "\nWonder Woman " + heroWonderWoman +
                 "\nUltron " + heroUltron);
 
-        HeroTask[] metropoleHeroes = {heroBatman, heroWonderWoman, heroUltron};
+        Hero[] metropoleHeroes = {heroBatman, heroWonderWoman, heroUltron};
 
         System.out.println(heroUltron.calculatedLevel());
 
         int counter = 0;
-        for (HeroTask hero : metropoleHeroes) {
+        for (Hero hero : metropoleHeroes) {
             if (hero.calculatedLevel() == 1) {
                 counter++;
             }
@@ -33,7 +33,7 @@ public class HeroTaskRun {
         }
 
         counter = 0;
-        for (HeroTask hero : metropoleHeroes) {
+        for (Hero hero : metropoleHeroes) {
             if (hero.calculatedLevel() > 1) {
                 counter++;
             }
@@ -45,8 +45,8 @@ public class HeroTaskRun {
         }
 
         counter = 0;
-        for (HeroTask hero : metropoleHeroes) {
-            if ("John".equals(hero.name)) {
+        for (Hero hero : metropoleHeroes) {
+            if ("John".equals(hero.getName())) {
                 counter++;
             }
         }
@@ -79,26 +79,27 @@ public class HeroTaskRun {
         String newHeroNickname = scanner.nextLine();
         System.out.println("Please input new hero's ID:");
         int newHeroID = scanner.nextInt();
-        System.out.println("Please input new hero's type:");
-        HeroType newHeroType = HeroType.valueOf(scanner.next());
+//        Scanner of boolean
+//        System.out.println("Please input new hero's type:");
+//        HeroType newHeroType = HeroType.valueOf(scanner.next());
         System.out.println("Please input new hero's deed time:");
         int newHeroDeedTime = scanner.nextInt();
 
-        HeroTask newHero = new HeroTask(newHeroName, newHeroSurname, newHeroNickname,
+        Hero newHero = new Hero(newHeroName, newHeroSurname, newHeroNickname,
                 newHeroID, newHeroDeedTime);
 
-        HeroTask[] newMetropoleHeroes = {metropoleHeroes[0], metropoleHeroes[1], metropoleHeroes[2], newHero};
+        Hero[] newMetropoleHeroes = {metropoleHeroes[0], metropoleHeroes[1], metropoleHeroes[2], newHero};
         System.out.println(Arrays.toString(newMetropoleHeroes));
 
         System.out.println("Please input hero's ID about who you want to receive an information:");
         int inputHeroID = scanner.nextInt();
-        if (inputHeroID == metropoleHeroes[0].heroID) {
+        if (inputHeroID == metropoleHeroes[0].getHeroID()) {
             System.out.println(metropoleHeroes[0]);
-        } else if (inputHeroID == metropoleHeroes[1].heroID) {
+        } else if (inputHeroID == metropoleHeroes[1].getHeroID()) {
             System.out.println(metropoleHeroes[1]);
-        } else if (inputHeroID == metropoleHeroes[2].heroID) {
+        } else if (inputHeroID == metropoleHeroes[2].getHeroID()) {
             System.out.println(metropoleHeroes[2]);
-        } else if (inputHeroID == newHero.heroID) {
+        } else if (inputHeroID == newHero.getHeroID()) {
             System.out.println(newHero);
         } else {
             System.out.println("There is no such ID. Please try again!");

@@ -1,6 +1,4 @@
-package lesson17;
-
-import lesson16.HeroTask;
+package heroAppLesson16Lesson19;
 
 import java.util.ArrayList;
 
@@ -8,30 +6,30 @@ public class District {
     private String title;
     private String city;
     private int districtID;
-    private ArrayList<HeroTask> heroesInTheDistrict;
+    private ArrayList<Hero> heroesInTheDistrict;
 
     public District() {
     }
 
-    public District(String title, String city, int districtID, ArrayList<HeroTask> heroesInTheDistrict) {
+    public District(String title, String city, int districtID, ArrayList<Hero> heroesInTheDistrict) {
         this.title = title;
         this.city = city;
         this.districtID = districtID;
         this.heroesInTheDistrict = heroesInTheDistrict;
     }
 
-    public boolean addNewHero(HeroTask hero) {
+    public boolean addNewHero(Hero hero) {
         return heroesInTheDistrict.add(hero);
     }
 
-    public HeroTask removeHero(int index) {
+    public Hero removeHero(int index) {
         return heroesInTheDistrict.remove(index);
     }
 
     public float calculateAvgLevelInDistrict() {
         float heroLevelSum = 0;
         for (int i = 0; i < heroesInTheDistrict.size(); i++) {
-            HeroTask hero = heroesInTheDistrict.get(i);
+            Hero hero = heroesInTheDistrict.get(i);
             heroLevelSum += hero.calculatedLevel();
         }
         return heroLevelSum / heroesInTheDistrict.size();
@@ -61,11 +59,11 @@ public class District {
         this.districtID = districtID;
     }
 
-    public ArrayList<HeroTask> getHeroesInTheDistrict() {
+    public ArrayList<Hero> getHeroesInTheDistrict() {
         return heroesInTheDistrict;
     }
 
-    public void setHeroesInTheDistrict(ArrayList<HeroTask> heroesInTheDistrict) {
+    public void setHeroesInTheDistrict(ArrayList<Hero> heroesInTheDistrict) {
         this.heroesInTheDistrict = heroesInTheDistrict;
     }
 

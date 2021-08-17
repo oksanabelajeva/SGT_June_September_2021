@@ -1,19 +1,16 @@
-package lesson16;
+package heroAppLesson16Lesson19;
 
-public class HeroTask {
+public class Hero extends Person {
 
-    String name;
-    String surname;
-    String nickname;
-    int heroID;
-    int crimeTime;
+    private String nickname;
+    private int heroID;
+    private int crimeTime;
 
-    public HeroTask() {
+    public Hero() {
     }
 
-    public HeroTask(String name, String surname, String nickname, int heroID, int crimeTime) {
-        this.name = name;
-        this.surname = surname;
+    public Hero(String name, String surname, String nickname, int heroID, int crimeTime) {
+        super(name, surname);
         this.nickname = nickname;
         this.heroID = heroID;
         this.crimeTime = crimeTime;
@@ -28,22 +25,6 @@ public class HeroTask {
             return 3;
         }
         return 0;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public String getNickname() {
@@ -72,12 +53,10 @@ public class HeroTask {
 
     @Override
     public String toString() {
-        return "HeroTask{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", nickname='" + nickname + '\'' +
+        return "Hero{" +
+                "nickname='" + nickname + '\'' +
                 ", heroID=" + heroID +
-                ", deedTime=" + crimeTime +
-                '}';
+                ", crimeTime=" + crimeTime +
+                "} " + super.toString();
     }
 }
