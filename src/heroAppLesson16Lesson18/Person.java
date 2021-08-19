@@ -1,4 +1,4 @@
-package heroAppLesson16Lesson19;
+package heroAppLesson16Lesson18;
 
 public class Person {
     private String name;

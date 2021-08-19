@@ -1,27 +1,27 @@
-package heroAppLesson16Lesson19;
+package heroAppLesson19;
 
 public class Hero extends Person {
 
     private String nickname;
     private int heroID;
-    private int crimeTime;
+    private int deedTime;
 
     public Hero() {
     }
 
-    public Hero(String name, String surname, String nickname, int heroID, int crimeTime) {
+    public Hero(String name, String surname, String nickname, int heroID, int deedTime) {
         super(name, surname);
         this.nickname = nickname;
         this.heroID = heroID;
-        this.crimeTime = crimeTime;
+        this.deedTime = deedTime;
     }
 
     public int calculatedLevel() {
-        if (crimeTime < 20) {
+        if (deedTime < 20) {
             return 1;
-        } else if (crimeTime >= 20 && crimeTime <= 40) {
+        } else if (deedTime >= 20 && deedTime <= 40) {
             return 2;
-        } else if (crimeTime > 40) {
+        } else if (deedTime > 40) {
             return 3;
         }
         return 0;
@@ -43,12 +43,12 @@ public class Hero extends Person {
         this.heroID = heroID;
     }
 
-    public int getCrimeTime() {
-        return crimeTime;
+    public int getDeedTime() {
+        return deedTime;
     }
 
-    public void setCrimeTime(int crimeTime) {
-        this.crimeTime = crimeTime;
+    public void setDeedTime(int deedTime) {
+        this.deedTime = deedTime;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class Hero extends Person {
         return "Hero{" +
                 "nickname='" + nickname + '\'' +
                 ", heroID=" + heroID +
-                ", crimeTime=" + crimeTime +
+                ", crimeTime=" + deedTime +
                 "} " + super.toString();
     }
 }

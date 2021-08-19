@@ -1,4 +1,4 @@
-package heroAppLesson16Lesson19;
+package heroAppLesson16Lesson18;
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ public class District {
     public District() {
     }
 
-    public District(String title, String city, int districtID, ArrayList<Hero> heroesInTheDistrict) {
+       public District(String title, String city, int districtID, ArrayList<Hero> heroesInTheDistrict) {
         this.title = title;
         this.city = city;
         this.districtID = districtID;

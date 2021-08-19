@@ -1,12 +1,11 @@
-package heroAppLesson16Lesson19;
-
-import java.util.ArrayList;
+package heroAppLesson16Lesson18;
 
 public class Villain extends Person {
 
     private String nickname;
     private int heroID;
     private int crimeTime;
+
     public Villain() {
     }
 
