@@ -1,4 +1,4 @@
-package heroAppLesson19;
+package heroAppLesson19Lesson20;
 
 import java.util.ArrayList;
 
@@ -21,9 +21,9 @@ public class District {
     public float calculateHeroesAvgLevelInDistrict() {
         float onlyHeroLevelSum = 0;
         int counter = 0;
-        for (int i = 0; i < personInTheDistrict.size(); i++) {
-            if (personInTheDistrict.get(i) instanceof Hero) {
-                onlyHeroLevelSum += ((Hero) personInTheDistrict.get(i)).getDeedTime();
+        for (Person person : personInTheDistrict) {
+            if (person instanceof Hero) {
+                onlyHeroLevelSum += ((Hero) person).getDeedTime();
                 counter++;
             }
         }

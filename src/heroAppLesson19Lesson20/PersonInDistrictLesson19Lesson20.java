@@ -1,9 +1,8 @@
-package heroAppLesson19;
+package heroAppLesson19Lesson20;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
-public class PersonInDistrictLesson19 {
+public class PersonInDistrictLesson19Lesson20 {
     public static void main(String[] args) {
 
         Hero hero1 = new Hero("Janis", "Liepins", "Ninja", 45, 45);
@@ -47,7 +46,6 @@ public class PersonInDistrictLesson19 {
         allDistricts.add(districtLarge);
         System.out.println(allDistricts);
 
-        //f.      Find out which District is with the highest amount of Persons.
         int highestAmountOfPersonsInDistrict = 0;
         for (District districtToCompareSize : allDistricts) {
             if (districtToCompareSize.findSizeOfDistrict() > highestAmountOfPersonsInDistrict) {
@@ -57,11 +55,38 @@ public class PersonInDistrictLesson19 {
             }
         }
 
-        ArrayList<District> districtWithHighestAmountOfPersonsInDistrict = new ArrayList<>();
         for (District districtToCompareSize : allDistricts) {
             if (districtToCompareSize.findSizeOfDistrict() == highestAmountOfPersonsInDistrict) {
-                districtWithHighestAmountOfPersonsInDistrict.add(districtToCompareSize);
                 System.out.println("District with the highest amount of Persons is " + districtToCompareSize.getTitle() + ".");
+            }
+        }
+
+        Hero hero8 = new Hero("Marta", "Liepina", "Grass", 876, 5);
+        Hero hero9 = new Hero("Karlis", "Liepins", "Sun", 796, 3557);
+        Hero hero10 = new Hero("Martins", "Liepins", "Rain", 135, 865);
+        Hero hero11 = new Hero("Edgars", "Popovs", "Flash", 3, 9421);
+        Hero hero12 = new Hero("Laila", "Popova", "Hero", 578, 6357);
+        Hero hero13 = new Hero("Olga", "Skala", "Sound", 76, 2782);
+        Hero hero14 = new Hero("Markuss", "Skals", "Flow", 84, 7962);
+
+        ArrayList<Person> districtThirdList = new ArrayList<>();
+        districtThirdList.add(hero8);
+        districtThirdList.add(hero9);
+        districtThirdList.add(hero10);
+        districtThirdList.add(hero11);
+        districtThirdList.add(hero12);
+        districtThirdList.add(hero13);
+        districtThirdList.add(hero14);
+
+        District districtThird = new District("Third district", "Chicago", 3, districtThirdList);
+
+        allDistricts.add(districtThird);
+
+        float largestAverageHeroLevel = 0;
+        for (District checkedDistricts : allDistricts){
+            if (checkedDistricts.calculateHeroesAvgLevelInDistrict() > largestAverageHeroLevel){
+                largestAverageHeroLevel = checkedDistricts.calculateHeroesAvgLevelInDistrict();
+                System.out.println("District with the largest average Hero level of a district is " + checkedDistricts.getTitle() + ".");
             }
         }
     }

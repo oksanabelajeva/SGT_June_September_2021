@@ -1,4 +1,4 @@
-package heroAppLesson19;
+package heroAppLesson19Lesson20;
 
 public class Hero extends Person {
 
